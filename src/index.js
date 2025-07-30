@@ -21,7 +21,12 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-app.use('/',(req,res)=>{});
+app.get('/',(req,res)=>{
+    res.send({
+        activeStatus:true,
+        error:false
+    })
+});
 app.use('/user',authRouter);
 app.use('/problem',problemRouter);
 app.use('/submission',submitRouter);
