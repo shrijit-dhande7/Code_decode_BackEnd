@@ -32,7 +32,7 @@ const register = async (req,res)=>{
    res.cookie('token', token, {
   maxAge: 60 * 60 * 1000,
   httpOnly: true,
-  secure: true,
+ secure: process.env.NODE_ENV === 'production',
   sameSite: 'None'
 });
 
@@ -75,7 +75,7 @@ const login = async (req,res)=>{
     res.cookie('token', token, {
   maxAge: 60 * 60 * 1000,
   httpOnly: true,
-  secure: true,
+ secure: process.env.NODE_ENV === 'production',
   sameSite: 'None'
 });
 
