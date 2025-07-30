@@ -14,7 +14,7 @@ const cors = require('cors')
 // console.log("Hello")
 
 app.use(cors({
-    origin: ['http://localhost:5173','https://code-decode-front-end-ztb6.vercel.app'],
+    origin: 'https://code-decode-front-end.vercel.app',
     credentials: true 
 }))
 
